@@ -22,15 +22,15 @@ function snakeCase(str) {
 }
 function toSnakeCase(str) {
   return str
-    .split("")
+    .split(" ")
     .map((character) => {
       if (character == character.toLowerCase()) {
-        return "_" + character.toUpperCase();
+        return "" + character.toUpperCase();
       } else {
         return character;
       }
     })
-    .join("");
+    .join("_");
 }
 function kebabCase(str) {
   return str
@@ -40,15 +40,15 @@ function kebabCase(str) {
 }
 function toKebabCase(str) {
   return str
-    .split("")
+    .split(" ")
     .map((character) => {
       if (character == character.toLowerCase()) {
-        return "-" + character.toUpperCase();
+        return "" + character.toUpperCase();
       } else {
         return character;
       }
     })
-    .join("");
+    .join("-");
 }
 function my_func() {
   let text = document.getElementById("text").value;
